@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("Hintergrund.jpg");
+  background-size: cover;
+}
+
+.weather-today {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  height: 70%;
+  width: 40%;
+  background-color: rgba(66, 44, 255, 0.3);
+  border-radius: 30px;
+  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(22, 7, 158, 0.25);
+  overflow: hidden;
+}
+
+.weather-parameters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  overflow: auto;
+}
+
+.div_mainparameters {
+  display: flex;
+  flex-direction: column; /* Anordnung in Spalten (vertikal) */
+  justify-content: center; /* Zentriert die Elemente vertikal */
+  align-items: center; /* Zentriert die Elemente horizontal */
+  width: 100%;
+}
+
+.div_parameters {
+  height: 100px;
+  width: 45%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    "eins zwei"
+    "eins drei";
+}
+
+.bx-wind {
+  color: #ffffff;
+}
+
+.bx-water {
+  color: #ffffff;
+}
+
+.bx-cloud {
+  color: #ffffff;
+  font-size: 90px;
+}
+
+.bxs-sun {
+  color: #ffffff;
+  font-size: 90px;
+}
+
+.bx-search-alt-2 {
+  color: #ffffff;
+  transition: color 0.3s ease; /* Sanfte Übergangseffekte hinzufügen */
+}
+
+.bx-search-alt-2:hover {
+  color: rgb(128, 22, 250);
+}
+
+#search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: top;
+  align-items: left;
+  margin-top: 20px;
+}
+
+#search-button {
+  background-color: rgba(66, 44, 255, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+#search-box {
+  font-family: "Crete Round", serif;
+  height: 40px;
+  width: 20vw;
+  padding-left: 15px;
+  background-color: rgba(22, 7, 158, 0);
+  border: 2px solid white;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.textstyle1 {
+  grid-area: zwei;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  font-family: "Crete Round", serif;
+  color: white;
+}
+
+.textstyle2 {
+  grid-area: drei;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Crete Round", serif;
+  color: white;
+}
+
+.windspeedicon, .humidityicon {
+  grid-area: eins;
+  display: flex;
+  justify-content: center; /* Zentrierung horizontal */
+  align-items: center;
+  font-size: 30px;
+}
+.textstylemain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 40px;
+  font-family: "Crete Round", serif;
+  color: white;
+}
