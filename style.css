@@ -76,6 +76,14 @@ body {
   font-size: 90px;
 }
 
+.bx {
+  color: #ffffff;
+}
+
+.bx-cloud-light-rain{
+  font-size: 90px;
+}
+
 .bx-search-alt-2 {
   color: #ffffff;
   transition: color 0.3s ease; /* Sanfte Übergangseffekte hinzufügen */

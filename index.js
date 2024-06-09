@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         // Neuen Container erstellen und Wetterdaten anzeigen
         divcontainer(apiUrl);
-      } 
+      }
     } catch (error) {
       console.error(error);
       alert("Ein Ort mit diesem Namen existiert nicht");
@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function divcontainer() {
-
     fetchData();
     weatherparameters = document.createElement("div");
     weatherparameters.className = "weather-parameters";
@@ -60,18 +59,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainText1 = document.createElement("span");
     mainText.className = "textstylemain";
     mainText1.className = "textstyle1";
-    mainText1.innerHTML = description;
-    if (description === "overcast clouds" || "scattered clouds") {
-      mainicon.className = "bx bx-cloud";
-    } else if (
-      description === "moderate rain" ||
-      "light intensity drizzle rain" ||
-      "broken clouds"
-    ) {
-      mainicon.className = "bx bx-cloud-light-rain";
-    } else if (description === "clear sky") {
-      mainicon.className = "bx bxs-sun";
+    console.log((mainText1.innerHTML = description));
+    switch (description) {
+      case "overcast clouds":
+      case "scattered clouds":
+      case "few clouds":
+        mainicon.className = "bx bx-cloud";
+        break;
+      case "moderate rain":
+      case "light intensity drizzle rain":
+      case "light rain":
+        mainicon.className = "bx bx-cloud-light-rain";
+        break;
+      case "clear sky":
+        mainicon.className = "bx bxs-sun";
+        break;
+      default:
+        // Optional: Default case if no match is found
+        mainicon.className = ""; 
+        break;
     }
+
     div_mainweather.appendChild(mainicon);
     div_mainweather.appendChild(mainText);
 
@@ -125,4 +133,3 @@ document.addEventListener("DOMContentLoaded", function () {
     div_humiditydescription.innerHTML = "Feuchtigkeit";
   }
 });
-
